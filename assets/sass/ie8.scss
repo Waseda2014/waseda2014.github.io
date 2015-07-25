@@ -4,33 +4,19 @@
 @import 'libs/skel';
 
 /*
-	Highlights by HTML5 UP
+	Strata by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Basic */
+/* Button */
 
-	body, html {
-		height: 100%;
-	}
-
-	html {
-		background: none;
-	}
-
-/* List */
-
-	ul {
-		&.actions {
-			li {
-				padding: 0 0 0 (_size(element-margin) * 0.5);
-
-				&:first-child {
-					padding-left: 0;
-				}
-			}
-		}
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 	}
 
 /* Form */
@@ -40,20 +26,20 @@
 	input[type="email"],
 	select,
 	textarea {
-		border: solid 2px _palette(border);
 		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 	}
 
 	input[type="text"],
 	input[type="password"],
-	input[type="email"] {
+	input[type="email"],
+	select {
+		height: _size(element-height);
 		line-height: _size(element-height);
 	}
 
 	input[type="checkbox"],
 	input[type="radio"] {
-		font-size: 3em;
-
 		& + label {
 			&:before {
 				display: none;
@@ -61,88 +47,41 @@
 		}
 	}
 
-/* Button */
+/* Image */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
-		border: solid 2px _palette(border);
-	}
+	.image {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 
-/* Main BG */
-
-	.main-bg {
-		z-index: 0;
-	}
-
-/* Main */
-
-	.main {
-		background-size: cover;
-
-		.container {
-			background: _palette(bg);
-			border-top: solid 1px _palette(border);
-			position: relative;
-			z-index: 1;
+		&:before, &:after {
+			display: none !important;
 		}
 
-		.goto-next {
-			@include icon;
-
-			&:before {
-				color: _palette(border);
-				content: '\f063';
-				display: block;
-				font-size: 2em;
-				height: 2em;
-				left: 0;
-				line-height: 2em;
-				position: absolute;
-				text-align: center;
-				text-indent: 0;
-				top: 0;
-				width: 2em;
-			}
+		img {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
 		}
 	}
 
 /* Header */
 
 	#header {
-		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
 		background-image: url('../../images/bg.jpg');
+		background-repeat: no-repeat;
 		background-size: cover;
-		height: 100%;
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
 
-		&:after {
-			min-height: 100%;
-		}
-
-		header {
-			position: relative;
-			z-index: 1;
-		}
-
-		.container {
-			background: _palette(bg);
-			z-index: 1;
+		h1 {
+			color: _palette(accent2, fg-bold);
 		}
 	}
 
 /* Footer */
 
 	#footer {
-		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
-		background-image: url('../../images/bg.jpg');
-		background-size: cover;
-
-		.container {
-			background: _palette(bg);
-			border-top: solid 1px _palette(border);
-			position: relative;
-			z-index: 1;
+		.icons {
+			a {
+				color: _palette(accent2, fg-bold);
+			}
 		}
 	}

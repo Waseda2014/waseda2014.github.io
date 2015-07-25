@@ -1,13 +1,24 @@
 /*
-	Highlights by HTML5 UP
+	Strata by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function($) {
 
+	var settings = {
+
+		// Parallax background effect?
+			parallax: true,
+
+		// Parallax factor (lower = more intense, higher = less intense).
+			parallaxFactor: 20
+
+	};
+
 	skel.breakpoints({
-		large: '(max-width: 1680px)',
+		xlarge: '(max-width: 1800px)',
+		large: '(max-width: 1280px)',
 		medium: '(max-width: 980px)',
 		small: '(max-width: 736px)',
 		xsmall: '(max-width: 480px)'
@@ -15,62 +26,27 @@
 
 	$(function() {
 
-		var	$window = $(window),
+		var $window = $(window),
 			$body = $('body'),
-			$html = $('html');
+			$header = $('#header');
 
 		// Disable animations/transitions until the page has loaded.
-			$html.addClass('is-loading');
+			$body.addClass('is-loading');
 
 			$window.on('load', function() {
-				window.setTimeout(function() {
-					$html.removeClass('is-loading');
-				}, 0);
+				$body.removeClass('is-loading');
 			});
 
-		// Touch mode.
+		// Touch?
 			if (skel.vars.mobile) {
 
-				var $wrapper;
+				// Turn on touch mode.
+					$body.addClass('is-touch');
 
-				// Create wrapper.
-					$body.wrapInner('<div id="wrapper" />');
-					$wrapper = $('#wrapper');
-
-					// Hack: iOS vh bug.
-						if (skel.vars.os == 'ios')
-							$wrapper
-								.css('margin-top', -25)
-								.css('padding-bottom', 25);
-
-					// Pass scroll event to window.
-						$wrapper.on('scroll', function() {
-							$window.trigger('scroll');
-						});
-
-				// Scrolly.
-					$window.on('load.hl_scrolly', function() {
-
-						$('.scrolly').scrolly({
-							speed: 1500,
-							parent: $wrapper,
-							pollOnce: true
-						});
-
-						$window.off('load.hl_scrolly');
-
-					});
-
-				// Enable touch mode.
-					$html.addClass('is-touch');
-
-			}
-			else {
-
-				// Scrolly.
-					$('.scrolly').scrolly({
-						speed: 1500
-					});
+				// Height fix (mostly for iOS).
+					window.setTimeout(function() {
+						$window.scrollTop($window.scrollTop() + 1);
+					}, 0);
 
 			}
 
@@ -86,133 +62,58 @@
 			});
 
 		// Header.
-			var $header = $('#header'),
-				$headerTitle = $header.find('header'),
-				$headerContainer = $header.find('.container');
 
-			// Make title fixed.
-				if (!skel.vars.mobile) {
+			// Parallax background.
 
-					$window.on('load.hl_headerTitle', function() {
+				// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
+					if (skel.vars.browser == 'ie'
+					||	skel.vars.mobile)
+						settings.parallax = false;
 
-						skel.on('-medium !medium', function() {
+				if (settings.parallax) {
 
-							$headerTitle
-								.css('position', 'fixed')
-								.css('height', 'auto')
-								.css('top', '50%')
-								.css('left', '0')
-								.css('width', '100%')
-								.css('margin-top', ($headerTitle.outerHeight() / -2));
+					skel.on('change', function() {
 
-						});
+						if (skel.breakpoint('medium').active) {
 
-						skel.on('+medium', function() {
+							$window.off('scroll.strata_parallax');
+							$header.css('background-position', 'top left, center center');
 
-							$headerTitle
-								.css('position', '')
-								.css('height', '')
-								.css('top', '')
-								.css('left', '')
-								.css('width', '')
-								.css('margin-top', '');
+						}
+						else {
 
-						});
+							$header.css('background-position', 'left 0px');
 
-						$window.off('load.hl_headerTitle');
+							$window.on('scroll.strata_parallax', function() {
+								$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
+							});
+
+						}
 
 					});
 
 				}
 
-			// Scrollex.
-				skel.on('-small !small', function() {
-					$header.scrollex({
-						terminate: function() {
+		// Main Sections: Two.
 
-							$headerTitle.css('opacity', '');
+			// Lightbox gallery.
+				$window.on('load', function() {
 
-						},
-						scroll: function(progress) {
-
-							// Fade out title as user scrolls down.
-								if (progress > 0.5)
-									x = 1 - progress;
-								else
-									x = progress;
-
-								$headerTitle.css('opacity', Math.max(0, Math.min(1, x * 2)));
-
-						}
+					$('#two').poptrox({
+						caption: function($a) { return $a.next('h3').text(); },
+						overlayColor: '#2c2c2c',
+						overlayOpacity: 0.85,
+						popupCloserText: '',
+						popupLoaderText: '',
+						selector: '.work-item a.image',
+						usePopupCaption: true,
+						usePopupDefaultStyling: false,
+						usePopupEasyClose: false,
+						usePopupNav: true,
+						windowMargin: (skel.breakpoint('small').active ? 0 : 50)
 					});
-				});
-
-				skel.on('+small', function() {
-
-					$header.unscrollex();
 
 				});
-
-		// Main sections.
-			$('.main').each(function() {
-
-				var $this = $(this),
-					$primaryImg = $this.find('.image.primary > img'),
-					$bg,
-					options;
-
-				// No primary image? Bail.
-					if ($primaryImg.length == 0)
-						return;
-
-				// Hack: IE8 fallback.
-					if (skel.vars.IEVersion < 9) {
-
-						$this
-							.css('background-image', 'url("' + $primaryImg.attr('src') + '")')
-							.css('-ms-behavior', 'url("css/ie/backgroundsize.min.htc")');
-
-						return;
-
-					}
-
-				// Create bg and append it to body.
-					$bg = $('<div class="main-bg" id="' + $this.attr('id') + '-bg"></div>')
-						.css('background-image', (
-							'url("css/images/overlay.png"), url("' + $primaryImg.attr('src') + '")'
-						))
-						.appendTo($body);
-
-				// Scrollex.
-					options = {
-						mode: 'middle',
-						delay: 200,
-						top: '-10vh',
-						bottom: '-10vh'
-					};
-
-					if (skel.canUse('transition')) {
-
-						options.init = function() { $bg.removeClass('active'); };
-						options.enter = function() { $bg.addClass('active'); };
-						options.leave = function() { $bg.removeClass('active'); };
-
-					}
-					else {
-
-						$bg
-							.css('opacity', 1)
-							.hide();
-
-						options.init = function() { $bg.fadeOut(0); };
-						options.enter = function() { $bg.fadeIn(400); };
-						options.leave = function() { $bg.fadeOut(400); };
-
-					}
-
-					$this.scrollex(options);
-
-			});
 
 	});
 
