@@ -2476,7 +2476,7 @@
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 35%;
+		width: 25%;
 	}
 
 		#header strong, #header b {
@@ -2507,7 +2507,7 @@
 		padding: 0 4em 6em 0;
 		position: fixed;
 		text-align: right;
-		width: 35%;
+		width: 25%;
 	}
 
 		#footer .icons {
@@ -2851,7 +2851,7 @@
 
 			#header {
 				padding: 6em 3em 3em 3em;
-				width: 30%;
+				width: 25%;
 			}
 
 				#header h1 {
@@ -2866,7 +2866,7 @@
 
 			#footer {
 				padding: 0 3em 5em 3em;
-				width: 30%;
+				width: 25%;
 			}
 
 				#footer .copyright li {
