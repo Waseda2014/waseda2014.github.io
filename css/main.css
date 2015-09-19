@@ -1,0 +1,562 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+	font-size: 112%;
+	font-weight: 300;
+	color:#555555;
+	line-height: 125%;
+	background-color:#ffffff;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+header{
+	background: url(../img/jumbotron.jpg) no-repeat fixed;
+	background-color: #fafafa;
+	height: 30rem;
+    position: relative;
+}
+
+header div{
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+    position: absolute;	
+    text-transform: bold;
+    color:#ffffff;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:460px;
+}
+
+header div p{
+	margin-top: 2.4rem;
+	font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 1.33rem;
+}
+
+/* why is it diffferent from Photoshop line height? */
+header h1{
+	font-size:2.67rem;
+	line-height: 1.2em;
+	height:5.28rem;
+}
+
+/*Section intro*/
+
+.portrait{
+	display: block;
+	margin:0 auto;
+	transform: translateY(-50%);
+}
+article h2{
+	text-align: center;
+	font-size:2.22rem;
+	font-family: Teko, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+.profession, .date_location{
+	text-align: center;
+}
+
+
+.profession{
+	color:#f63c3c;
+	padding-top: 1.11rem;
+}
+
+.date_location{
+	padding-top:0.56rem;
+}
+
+/* main paragraph */
+.main_text{
+	padding-top: 3.33rem;
+	width: 572px;
+	margin: 0 auto;
+	line-height: 1.5em;
+}
+
+.list{
+	width: 572px;
+	margin: 0 auto;
+	padding-top: 2.5em;
+	line-height:1.5em;
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-bottom: 3.89rem;
+}
+
+.list li a{
+	color: #555555;
+}
+
+/* comment section*/
+
+.reply{
+	width:572px;
+	margin: 0 auto;
+}
+
+.feedback{
+	font-family: Teko, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 1.67rem;
+}
+
+form input{
+	display: block;
+	margin-top: 1.78rem;
+	width: 572px;
+	height: 50px;
+	margin-bottom:0.72rem;
+	padding-left:1.22rem;
+	font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+}
+
+form textarea{
+	display: block;
+	width:572px;
+	padding: 1.11rem 1.22rem;
+	font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+	margin-bottom: 12px;
+}
+
+form button{
+	display:block;
+	width: 130px;
+	height: 50px;;	
+	background-color:#f63c3c;
+	color: #feffff;	
+	text-transform: uppercase;
+	border-style: none;
+	font-family: Teko, Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	margin-bottom: 115px;
+}
+
+form button:hover{
+	color: #fff;
+	background-color: #ae2c2c; 
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;  
+}
+
+/*share*/
+
+.social_media h3{
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+	font-family: Teko, Helvetica, Arial, sans-serif;
+}
+
+.social_media p{
+	font-size: 1rem;
+	font-weight: 300;
+	padding: 20px;
+	text-align: center;
+}
+
+.social_media{
+	text-align: center;
+}
+
+/* share buttons */
+
+.share_buttons{
+	margin: 0 auto;
+	width:80%;
+}
+
+.share a {
+    text-decoration: none;
+    font-size:1.11rem;
+    color: #555555;
+    font-family: Teko, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.share_buttons ul li{
+	display:block;
+	border-style: solid;
+	border-color: #d7d5d5;
+	border-width: 2px;	
+	margin-left:1.5%;
+	height: 50px;
+	width: 23%;
+	text-align: center;
+	padding:0.75rem;
+	float:left;
+}
+
+.share li:hover{
+	color:white;
+	background-color: #f63c3c; 
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;  
+}
+
+/* previous next*/
+
+.page_link a{
+	height:310px;
+	margin-top:37px;
+	position: relative;
+}
+
+.previous{
+	float:left;
+	background: url(../img/previous_page.jpg);
+	width:50%;
+}
+
+.previous:hover{
+	opacity: 0.7;
+	filter: alpha(opacity=40);
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;  
+}
+
+.next{
+	float:right;
+	background: url(../img/next_page.jpg);
+	width:50%;
+}
+
+.next:hover{
+	opacity: 0.7;
+	filter: alpha(opacity=40);
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;  
+}
+
+.page_link a div{
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color:white;
+	font-size:1.56rem;
+}
+
+.page_link div a{
+	color:#fff;
+	text-decoration: none;
+}
+
+.light{
+	font-family: Teko, Helvetica, Arial, sans-serif;
+	font-size:1.875rem;
+	font-weight: 300;
+	display:block;
+	color:#b3b1b2;
+	margin-bottom:30px;
+}
+
+/*footer*/
+footer{
+	font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+	font-size:0.875rem;
+	position:relative;
+	height:68px;
+}
+
+#copyright{
+	position: absolute;
+	display:inline-block;
+	left:25%;
+	transform: translatex(-50%);
+	padding:27px 0px;
+}
+
+#terms{
+	position: absolute;
+	display: inline-block;
+	left:75%;
+	transform: translatex(-50%);
+	padding:27px 0px;
+}
+
+.cf:after, .cf:before {
+	content: "";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+
+
+@media screen and (max-width: 1024px){
+	/*header*/
+	header{
+		height: 25rem;
+	}
+
+	/*previous next*/
+	.page_link a{
+		height:200px;
+
+	}
+
+	.page_link a div{
+		font-size:1.3rem;
+	}
+
+	.light{
+		font-size:1.5rem;
+		font-weight: 300;
+		margin-bottom:30px;
+	}
+
+}
+
+
+
+@media screen and (max-width: 768px){
+	/*header*/
+	header{
+		height: 20rem;
+	}
+
+	header div{
+		width:300px;
+	}
+
+	header h1{
+		font-size:2rem;
+		line-height: 1.2em;
+		height:3rem;
+	}
+	header div p{
+		font-size: 0.8rem;
+	}
+	
+	/* section intro */
+	
+	article h2{
+		text-align: center;
+		font-size:1.5rem;
+		font-family: Teko, Helvetica, Arial, sans-serif;
+		font-weight: 300;
+	}
+
+	.profession, .date_location{
+		font-size: 1rem;
+	}
+
+	.profession{
+		color:#f63c3c;
+		padding-top: 0.5rem;
+	}
+
+	.date_location{
+		padding-top:0.5rem;
+	}
+	
+	/*main article*/
+	.main_text, .list{
+		width:80%;
+		font-size: 1rem;
+		padding-top: 1.8rem;
+	}
+
+	/*comment section*/
+	.feedback{
+		font-size:1.5rem;
+	}
+	.reply{
+		width:90%;
+	}
+	form input{
+		width: 100%;
+		margin-top: 1.3rem;
+		height:35px;
+	}
+	form textarea{
+		width:100%;
+		padding: 1rem;
+		margin-bottom:8px;
+		height:150px;
+	}
+
+	form button{
+		margin-bottom:50px;
+	}
+
+
+/*share buttons*/
+	.texts{
+		visibility:hidden;
+		position:absolute;
+	}
+
+/*previous next*/
+	.page_link a{
+		height:175px;
+	}
+
+	.page_link a div{
+		font-size:0.8rem;
+	}
+
+	.light{
+		font-size:1.5rem;
+		font-weight: 300;
+		margin-bottom:15px;
+	}
+
+	/*footer*/
+
+}
+
+
+@media screen and (max-width:480px){
+	/*header*/
+	header{
+		height: 10rem;
+	}
+
+	header div{
+		width:250px;
+	}
+
+	header h1{
+		font-size:1.5rem;
+		line-height: 1.2em;
+		height:4.5rem;
+	}
+	header div p{
+		font-size: 0.5rem;
+		margin-top: 0rem;
+		visibility: hidden;
+	}
+	
+	/*section intro*/
+
+	.portrait{
+		display: block;
+		margin:0 auto;
+		transform: translateY(-50%);
+		height:40px;
+		width:40px;
+	}
+
+	.profession, .date_location{
+		font-size: 0.8rem;
+	}
+
+	/*main article*/
+	.main_text, .list{
+		width:80%;
+		padding-top: 1rem;
+	}
+
+	.list{
+		padding-top: 2rem;
+	}
+
+	.list li a{
+		text-decoration:none;
+		color:#2c78b7; 
+	}
+
+	/*comment section*/
+	.feedback{
+		font-size:1.4rem;
+		text-align: center;
+	}
+
+	form textarea{
+		width:100%;
+		padding: 0.7rem;
+		margin-bottom:8px;
+	}
+
+	.reply button{
+		margin-top: 0px;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom:70px;
+	}
+
+
+	/*share buttons*/
+	.social_media{
+		position: relative;
+	}
+
+	#share{
+		visibility: hidden;
+		position:absolute;
+	
+	}
+
+	.description{
+		visibility:hidden;
+		position:absolute;
+	}
+
+	/*previous next*/
+	.page_link a{
+		height:75px;
+	}
+
+	.page_link a div{
+		font-size:1.3rem;
+		top:70%;
+	}
+
+
+
+	.light{
+		font-size:1.5rem;
+		font-weight: 300;
+		margin-bottom:30px;
+	}
+
+
+	/*footer*/
+	footer{
+		font-size:0.6rem;
+	}
+
+	footer p{
+		display:block;
+		margin: 0 auto;
+	}
+
+	#copyright{
+		left:50%;
+		text-align: center;
+	}
+
+
+	#terms{
+			left:50%;
+			top:100%;
+			transform: translateX(-50%);
+			padding:27px 0px;
+		}
+
+}
