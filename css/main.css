@@ -417,10 +417,12 @@ a.effect-underline:hover:after {
 /*main----------------------
 -----------------------------------------------------------------*/
 
+
+
+
 .work{
 	width:85%;
 	margin: 0 auto;
-	text-align:right;
 }
 
 @media screen and (max-width:768px){
@@ -435,524 +437,144 @@ a.effect-underline:hover:after {
 	}
 }
 
-.projects{
-	height:250px;
+/* New Case Study Area---------------------*/
+
+
+/* Float 3 columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+	margin: 0 -5px;
+	margin-bottom:60px;
+}
+
+.row a{
+	  text-decoration:none;
+	  color:#000000;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #F7F7F7;
+  border-radius:5px;
+  height:400px;
+}
+
+.card:hover{
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.lower-card{
+	padding-top:50px;
+}
+
+
+
+.card img{
+	width:100%;
+	height:auto;
+}
+
+.cardPadding{
+	width:100%;
+	padding:30px 14px;
+	position: relative;
+}
+
+.card h2, h3{
 	display:inline-block;
-	margin-top:20px;
-	margin-right:0.5%;
-	position:relative;
-	text-align:center;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  	text-decoration:none;
-  	border-radius: 5px;
-}
-.projects:hover{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-   -moz-transform: translate(0px, -4px);
-    -ms-transform: translate(0px, -4px);
-    -o-transform: translate(0px, -2px);
-    -webkit-transform: translate(0px, -4px);
-    transform: translate(0px, -4px)
+	font-family: lato, sans serif;
 }
 
-.project_title{
-	font-family:"lato", sans-serif;
-	font-weight:700;
-	letter-spacing:0.04em;
-	font-size:24px;
-	margin-top:30px;
+.card h2{
+	font-weight: bold;
+	font-size: 18px;
+	margin-right:15px;
+}
+
+.card h3{
+	font-weight: 300;
+	font-size: 18px;
+}
+
+.card p{
+	margin:18px 0px;
+	font-family: lato, sans serif;
+	font-size:14px;
+	font-weight: 300;
+	line-height: 18px
 }
 
 
-.project_image{
+
+.arrow{
+	vertical-align:middle;
+	font-family: "roboto mono", monospace;
+	font-size:14px;
 	position:absolute;
-	right:50%;
 	bottom:0px;
-	transform: translatex(50%);
-}
-
-.project_image img{
-	width:100%;
-}
-
-
-/*~~~~~~~~~~~~~~~~~~~~~*?*/
-
-
-.project_description{
-	height:inherit;
-	width:100%;
-	background-color:green;
-	position:absolute;
-	top:0%;
-	left:0%;
-	visibility:hidden;
-}
-.project_description:hover{
-	visibility:visible;
-}
-
-/*Google Stuff*/
-.google{
-	width:99%;
-	position:relative;
-	background-image:url('../img/google_background.jpg');
-	background-size:cover;
-	background-repeat:no-repeat;
-	overflow:hidden;
-	background-position:center;
-}
-
-.google .project_title{
-	color:#484848;
-}
-
-.google_description img{
-	zoom:50%;
-}
-
-.google_description{
-	color:#484848;
-	position:absolute;
-	bottom:50%;
-	right:50%;
-	transform:translate(50%,50%);
-	width:100%;
-}
-
-.google_description h2{
-	margin-top:24px;
-	color:#484848;
-}
-
-.google_description p{
-	font-family: 'adobe garamond pro';
-	font-style: italic;
-	margin-top:25px;
-	letter-spacing:0.05em;
-	color:#484848;
-}
-
-/*Gogole stuff*/
-
-
-.fintech{
-	width:65.5%;
-	position:relative;
-	background-image:url('../img/fintech_background.jpg');
-	background-size:cover;
-	background-repeat:no-repeat;
-	overflow:hidden;
-	background-position:center;
-}
-
-.fintech .project_title{
-	color:white;
-}
-
-.fintech_description img{
-	zoom:50%;
-}
-
-.fintech_description{
-	color:white;
-	position:absolute;
-	bottom:50%;
-	right:50%;
-	transform:translate(50%,50%);
-	width:100%;
-}
-
-.fintech_description h2{
-	margin-top:24px;
-}
-
-.fintech_description p{
-	font-family: 'adobe garamond pro';
-	font-style: italic;
-	margin-top:25px;
-	letter-spacing:0.05em;
-}
-
-
-.first_alert{
-	width:32.5%;
-	background-image:
-    linear-gradient(
-      to bottom, 
-      #75B6D9, 
-      #85D2F9, 
-      #A0FCFF
-    );
-	background-size:cover;
-	background-repeat:no-repeat;
-	overflow:hidden;
-	background-position:left bottom;
-	position:relative;
-	color:white;
-}
-
-.first_alert img{
-	width:280px;
-}
-
-@media screen and (max-width: 1024px){
-	.first_alert img{
-		width:240px;
-	}
-}
-
-@media screen and (max-width: 768px){
-	.first_alert img{
-		width:250px;
-	}
-}
-
-.medmatch{
-	width:32.5%;
-	background-color:#EC4539;
-	background-image:
-    linear-gradient(
-      to top right, 
-      #FA1F0F, #FF6D5A
-    );
-	position:relative;
-}
-
-.medmatch .project_title{
-	color:white;
-	margin-bottom:30px;
-}
-
-@media screen and (max-width: 1024px){
-	.medmatch .project_title {
-	    margin-bottom: 45px;
-	}
-}
-@media screen and (max-width: 768px){
-	.medmatch .project_title {
-	    margin-bottom: 30px;
-	}
-}
-
-.medmatch img{
-	width:280px;
-}
-
-@media screen and (max-width: 1024px){
-	.medmatch img{
-		width:220px;
-	}
-}
-
-@media screen and (max-width: 768px){
-	.medmatch img{
-		width:250px;
-	}
-}
-
-
-
-
-
-.huddle{
-	width:32%;
-	background-color:#F5BC23;
-	position:relative;
-	overflow: hidden;
-}
-
-.huddle img{
-	width:260px;
-	margin-bottom:-3px;
-}
-
-@media screen and (max-width: 1024px){
-	.huddle img{
-		width:220px;
-	}
-}
-
-@media screen and (max-width: 768px){
-	.huddle img{
-		width: 250px;
-	}
-}
-
-
-.huddle .project_title{
-	color:white;
-	margin-bottom:28px;
-}
-@media screen and (max-width: 768px){
-
-	.huddle .project_title {
-	    color: white;
-	    margin-bottom: 20px;
-	}
-}
-
-
-
-
-
-.localguide{
-	width:32.5%;
-	background-image:url('../img/localguide_background.jpg');
-	background-size:cover;
-	background-repeat:no-repeat;
-	overflow:hidden;
-	background-position:center;
-	position:relative;
-
-}
-.localguide .project_title{
-	color:white;
-}
-
-
-
-.localguide .project_image{
-	margin-bottom:-1%;
-	width: 95px;
-}
-@media screen and (max-width: 1024px){
-	.localguide .project_image{
-		width:80px;
-	}
-}
-@media screen and (max-width: 768px){
-	.localguide .project_image{
-		width:90px;
-	}
-}
-
-
-.guardllama{
-	width:49%;
-	background: red; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, #2BD2E4, #AC7EF5); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, #2BD2E4, #AC7EF5); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, #2BD2E4, #AC7EF5); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, #2BD2E4, #AC7EF5); /* Standard syntax */
-	position:relative;
-}
-
-.guardllama .project_image{
-	 width: 320px;
-}
-@media screen and (max-width: 1024px){
-	.guardllama .project_image{
-	 	width: 300px;
-	}
-	.guardllama .project_title{
-		margin-bottom: 20px;
-	}
-}
-@media screen and (max-width: 768px){
-	.localguide .project_image{
-		width:90px;
-	}
-}
-
-.guardllama .project_title{
-	color:white;
-	margin-bottom: 25px;
-}
-
-
-.corcoran{
-	width:49%;
-	background-image:url('../img/corcoran_background.jpg');
-	background-image:
-    -webkit-filter: grayscale(100%);
-       -moz-filter: grayscale(100%);
-         -o-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-            filter: grayscale(100%); 
-
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position: center;
-	overflow:hidden;
-	position:relative;
-}
-
-.corcoran_description{
-	color:black;
-	position:absolute;
-	bottom:50%;
-	right:50%;
-	transform:translate(50%,50%);
-	width:100%;
-}
-
-.discover_description h2{
-	margin-top:24px;
-}
-
-.corcoran_description p{
-	font-family: 'adobe garamond pro';
-	font-style: italic;
-	margin-top:25px;
-}
-
-
-/*.corcoran{
-	width:65.5%;
-	position:relative;
-	background-image:url('../img/corcoran_background.jpg');
-	background-size:cover;
-	background-repeat:no-repeat;
-	overflow:hidden;
-	background-position:center;
-}
-
-.fintech_description p{
-	font-family: 'adobe caslon pro';
-	font-style: italic;
-	margin-top:25px;
-}
-*/
-
-
-.ecommerce{
-	width:65.5%;
-	position:relative;
-	background-image:url('../img/ecommerce.jpg');
-	background-image:
-    -webkit-filter: grayscale(100%);
-       -moz-filter: grayscale(100%);
-         -o-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-            filter: grayscale(100%); 
-	background-size:cover;
-	background-repeat:no-repeat;
-	overflow:hidden;
-	background-position:center;
-}
-
-.ecommerce_description{
-	color:black;
-	position:absolute;
-	bottom:50%;
-	right:50%;
-	transform:translate(50%,50%);
-	width:100%;
-}
-
-.ecommerce_description h2{
-	margin-top:24px;
-}
-
-.ecommerce_description p{
-	font-family: 'adobe garamond pro';
-	font-style: italic;
-	margin-top:25px;
-}
-
-
-
-
-
-
-
-
-
-.alexa{
-	width:32.5%;
-	background-image:url('../img/alexa.jpg');
-	background-image:
-    -webkit-filter: grayscale(100%);
-       -moz-filter: grayscale(100%);
-         -o-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-            filter: grayscale(100%); 
-	background-size:cover;
-	background-repeat:no-repeat;
-	overflow:hidden;
-	background-position: center;
-	position:relative;
-}
-.alexa_description{
-	color:white;
-	position:absolute;
-	bottom:50%;
-	right:50%;
-	transform:translate(50%,50%);
-	width:100%;
-}
-
-.alexa_description h2{
-	margin-top:24px;
-}
-
-.alexa_description p{
-	font-family: 'adobe garamond pro';
-	font-style: italic;
-	margin-top:25px;
-}
-
-
-
-
-@media screen and (min-width: 1025px){
-	/*
-	body{
-		width:1280px;
-		display:block;
-		margin:0 auto;
-	}
-	.top_bar{
-		width:1280px;
-	}
-	*/
-
-}
-
-@media screen and (max-width: 1024px){
-	.projects{
-		height:230px;
-	}
-}
-
-
-
-@media screen and (max-width: 768px){
-	.projects{
-		display:block;
-		width:100%;
-	}
-
-	.project_title{
-		margin-top:25px;
-	}
-
-	.huddle .project_image{
-		margin-bottom:-0.5%;
-	}
+	right:14px;
 	
 }
 
-@media screen and (max-width:480px){
-	.first_alert .project_image{
-		width:80%;
-	}
-	.project_title{
-		margin-top:25px;
-	}
-	.medmatch .project_image{
-		width:75%;
-	}
-	.huddle .project_image{
-		margin-bottom:-0.5%;
-	}
+.card-text{
+	margin-right: 5px;
+}
+
+.arrow img{
+	height:24px;
+	width: 24px;
+	display:inline-block;
+	vertical-align: middle;
 }
 
 
 
-/*NEW About me*/
+
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+ 	  width: 100%;
+      display: block;
+      margin-bottom: 20px;
+  }
+
+  .card{
+  	  height:450px;
+  	  margin-bottom:40px;
+  }
+
+  .lower-card {
+      padding-top: 0px;
+  }
+
+  .row {
+      margin-bottom: 0px;
+  }
+}
+
+
+
+/* End of Case Study Area ---------------------*/
+
+
+
 
 
 
@@ -961,7 +583,7 @@ a.effect-underline:hover:after {
 .about{
 	width:85%;
 	margin:5% auto;
-	margin-top: 15%;
+	margin-top: 25%;
 	position:relative;
 }
 
@@ -1037,7 +659,8 @@ a.effect-underline:hover:after {
 	float:right;
 }
 .description p{
-	font-family: "adobe garamond pro", serif;
+	font-family: "Lato", sans serif;
+	font-weight: 300;
 }
 
 @media screen and (max-width: 1024px){
@@ -1076,19 +699,127 @@ a.effect-underline:hover:after {
 	.description{
 		display:block;
 		width:100%;
-		height:400px;
+		height:460px;
 		padding: 10% 5%;
 	}
+
 
 }
 
 @media screen and (max-width:480px){
 	.description{
-		height:500px;
+		height:560px;
 	}
 		
 
 }
+
+/*Experiences*/
+
+.focus-area{
+	width: 90%;
+	background-color:#F9F8F8;
+	height:270px;
+	font-family:"roboto mono", monospace;
+	font-size:14px;
+	padding: 40px;
+	position:relative;
+	margin:0 auto;
+}
+
+
+
+.list-wrapper{
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width:90%;
+}
+
+
+
+.focus-area ul {
+	display:inline-block;
+	width:200px;
+	float:left;
+	margin-right: 10%;
+}
+
+.list-wrapper > :last-child 
+{margin-right: 0 !important; }
+
+ .focus-area li{
+	 margin: 16px 0px;
+}
+
+
+.companies{
+	text-align:center;
+	margin-top:45px;
+}
+
+.companies img{
+	width:65%;
+	height:auto;
+}
+
+@media screen and (max-width: 1024px){
+	.focus-area{
+		height:580px;
+		width: 100%;
+	}
+
+	.focus-area ul {
+	width:180px;
+	margin-right: 5%;
+	}
+
+	.list-wrapper{
+    left: 55%;
+    width:95%;
+	}
+
+	.companies img{
+	width:85%;
+	height:auto;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.focus-area{
+	height:580px;
+	width: 100%;
+	}
+
+	.focus-area ul {
+	display:block;
+	width:100%;
+	}
+
+	.companies img{
+	width:85%;
+	height:auto;
+	}
+
+
+}
+
+@media screen and (max-width:480px){
+	.focus-area{
+		height:580px;
+		width: 100%;
+	}
+
+	.companies img{
+	width:85%;
+	height:auto;
+	}
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+
+
 /*contact
 -----------------------------------------------------------------------*/
 .contact{
