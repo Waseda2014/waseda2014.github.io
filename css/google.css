@@ -155,7 +155,7 @@ header{
 
 @media screen and (max-width: 768px){
 	.head{
-		top:43%;
+		top:47%;
 		left:50%;
 		transform:translateX(-50%);
 		width:100%;
