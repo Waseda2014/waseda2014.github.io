@@ -627,8 +627,9 @@ main section{
 	.right_side {
 		display:inline-block;
 		width: 100%;
-		font-family: "adobe-garamond-pro", Georgia, serif;
+		font-family: "lato", sans-serif;
 		font-size:18px;
+		font-weight:300;
 		color: #505151;
 		line-height: 1.5em;
 		margin-left:0%;
