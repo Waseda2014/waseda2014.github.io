@@ -299,19 +299,6 @@ main section{
 	}
 
 
-
-
-/*
-.titles{
-	font-family: "adobe-garamond-pro", serif;
-	font-size:56px;
-	color:white;
-	display: inline-block;
-	margin:0 auto;	
-}
-
-*/
-
 .overview p{
 	font-family: 'lato', sans-serif;
 	font-size:16px;
@@ -329,17 +316,6 @@ main section{
 }
 
 
-/*
-.left_side h2{
-	font-family: 'lato', sans-serif;
-	text-transform:uppercase;
-	letter-spacing:0.05em;
-	font-size:16px;
-	font-weight:600;
-	color:white;
-	line-height:1.5em;
-}
-*/
 .images img{
 	margin:20px 0px;
 	width:100%;
@@ -374,100 +350,139 @@ main section{
 	font-family:"lato", sans-serif;
 	font-size:14px;
 }
-.more{
-	display:inline-block;
-	width:232px;
-	height:170px;
-	margin-right:5%;
-	position:relative;
-	transition: 0.5s;
-	border-top:5px solid black;
-  	-webkit-transition:0.5s;
-  	cursor: pointer;
-  	text-decoration:none;
-  	box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  	background-color:white;
+
+
+/* New Case Study Area---------------------*/
+
+
+/* Float 3 columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
 }
 
-.more img{
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+	margin: 0 -5px;
+	margin-bottom:60px;
+}
+
+.row a{
+	  text-decoration:none;
+	  color:#000000;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #F7F7F7;
+  border-radius:5px;
+  height:400px;
+  text-align:left;
+}
+
+.card:hover{
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+
+.card img{
 	width:100%;
+	height:auto;
 }
 
-
-/*test~~~~~~~~~~~~~~*/
-
-
-.more:hover {
-   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-   -moz-transform: translate(0px, -4px);
-    -ms-transform: translate(0px, -4px);
-    -o-transform: translate(0px, -2px);
-    -webkit-transform: translate(0px, -4px);
-    transform: translate(0px, -4px)
+.cardPadding{
+	width:100%;
+	padding:30px 14px;
+	position: relative;
 }
 
-
-@media screen and (max-width: 1024px){
-	.more{
-		margin-right:2%;
-		width:200px;
-	}
-
+.card h2, h3{
+	display:inline-block;
+	font-family: lato, sans serif;
 }
 
-@media screen and (max-width: 768px){
-	.more{
-		display:block;
-		width:100%;
-		overflow:hidden;
-		margin-bottom:20%;
-	}
+.card h2{
+	font-weight: bold;
+	font-size: 18px;
+	margin-right:15px;
 }
 
-.overlay{
-	height:inherit;
-	color:black;
-	text-align:left;
-	padding:8%;
+.card h3{
+	font-weight: 300;
+	font-size: 18px;
 }
 
-.more_description{
-	color:#343434;
-}
-
-.more_description h1{
-	font-size:22px;
-	font-family: 'Lato', sans-serif;
-	margin-bottom:20px;
-	font-weight:500;
-}
-
-.more_description h2{
-	font-family: 'lato', sans-serif;
-    font-size: 12px;
-	font-weight:700;
-	margin-bottom:10px
-}
-
-.more_description p{
-	font-family: 'Lato', sans-serif;
+.card p{
+	margin:18px 0px;
+	font-family: lato, sans serif;
 	font-size:14px;
-	line-height:1.5em;
-	font-weight:300;
+	font-weight: 300;
+	line-height: 18px
 }
 
 
-.GuardLlama{
-  border-top:5px solid #2BD2E4;
-}
-.MedMatch{
-  border-top:5px solid #F3575D;
-}
-.Huddle{
-  border-top:5px solid #EDB728;
-  margin-right:0px;
+
+.arrow{
+	vertical-align:middle;
+	font-family: "roboto mono", monospace;
+	font-size:14px;
+	position:absolute;
+	bottom:0px;
+	right:14px;
+	
 }
 
+.card-text{
+	margin-right: 5px;
+}
+
+.arrow img{
+	height:24px;
+	width: 24px;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+
+
+
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+ 	  width: 100%;
+      display: block;
+      margin-bottom: 20px;
+  }
+
+  .card{
+  	  height:450px;
+  	  margin-bottom:40px;
+  }
+
+  .lower-card {
+      padding-top: 0px;
+  }
+
+  .row {
+      margin-bottom: 0px;
+  }
+}
+
+
+
+/* End of Case Study Area ---------------------*/
 
 
 /*Responsive 
@@ -659,27 +674,3 @@ footer img{
 		width:90%;
 	}
 }
-
-
-
-/*
-@media screen and (max-width:1024px){
-	header figure img{
-		width:35%;
-	}
-}
-
-@media screen and (max-width:768px){
-	header figure img{
-		width:30%;
-	}
-}
-
-@media screen and (max-width:480px){
-	header figure img{
-		width:35%;
-		padding-top: 25%;
-	}
-}
-
-*/

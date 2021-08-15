@@ -472,10 +472,12 @@ a.effect-underline:hover:after {
   background-color: #F7F7F7;
   border-radius:5px;
   height:400px;
+  transition: 0.5s;
 }
 
 .card:hover{
 	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	transition: 0.5s;
 }
 
 .lower-card{
@@ -487,6 +489,18 @@ a.effect-underline:hover:after {
 .card img{
 	width:100%;
 	height:auto;
+	
+}
+
+.greyscale{
+	transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+
+.greyscale:hover{
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
 }
 
 .cardPadding{

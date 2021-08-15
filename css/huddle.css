@@ -235,7 +235,7 @@ main section{
 	margin:5% 0;
 }
 .titles{
-	font-family: "adobe-garamond-pro", serif;
+	font-family: "Lato", sans-serif;
 	font-size:56px;
 	color:#272b2b;
 	display: inline-block;
@@ -277,7 +277,8 @@ main section{
 .right_side {
 	display:inline-block;
 	width: 60%;
-	font-family: "adobe-garamond-pro";
+	font-family: "lato", sans-serif;
+	font-weight:300;
 	font-size:18px;
 	color: #505151;
 	line-height: 1.5em;
@@ -320,7 +321,7 @@ main section{
 }
 
 .insight p{
-	font-family: "adobe-garamond-pro", serif;
+	font-family: "lato", sans-serif;
 	line-height:1.7em;
 	font-size:16px;
 }
@@ -364,13 +365,13 @@ main section{
 
 .problem_statement{
 	margin-top:2em;
-	font-family: "adobe-garamond-pro", serif;
+	font-family: "Lato", sans-serif;
 	line-height: 2em;
 }
 
 .design_principles{
 	margin-top:2em;
-	font-family: "adobe-garamond-pro", serif;
+	font-family: "Lato", sans-serif;
 	line-height: 2em;
 }
 
