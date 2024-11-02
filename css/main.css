@@ -471,7 +471,7 @@ a.effect-underline:hover:after {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: #F7F7F7;
   border-radius:5px;
-  height:400px;
+  height:450px;
   transition: 0.5s;
 }
 
@@ -481,7 +481,7 @@ a.effect-underline:hover:after {
 }
 
 .lower-card{
-	padding-top:50px;
+	padding-top:0px;
 }
 
 
