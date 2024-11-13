@@ -11,7 +11,9 @@
 }
 
 
-body{}
+body{
+	
+}
 
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -201,7 +203,7 @@ header{
 	position:absolute;
 	top:47%;
 	left:50%;
-	width: 550px;
+	width: 580px;
 	transform: translate(-50%, -50%);
 }
 .intro h1{
@@ -214,7 +216,7 @@ header{
 }
 
 .intro h2{
-	font-size: 75px;
+	font-size: 72px;
 	font-family: 'lato', sans-serif;
 	font-weight:400;
 	color: #484848;
@@ -480,10 +482,6 @@ a.effect-underline:hover:after {
 	transition: 0.5s;
 }
 
-.lower-card{
-	padding-top:0px;
-}
-
 
 
 .card img{
@@ -594,6 +592,10 @@ a.effect-underline:hover:after {
 
 /*about section
 --------------------------------------------------------------------------*/
+
+
+
+
 .about{
 	width:85%;
 	margin:5% auto;
@@ -601,9 +603,21 @@ a.effect-underline:hover:after {
 	position:relative;
 }
 
+
+
+.about .container{
+	display:flex;
+	justify-content:center;
+}
+
+
+
 @media screen and (max-width: 768px){
 	.about{
 		margin-top:20%;	
+	}
+	.about .container{
+		display:block;
 	}
 }
 @media screen and (max-width: 480px){
@@ -614,33 +628,48 @@ a.effect-underline:hover:after {
 }
 .container{
 	text-align:center;
-	margin-bottom:50px;
 }
+
 .title{
-	font-family:"lato", sans-serif;
+	font-family:"nunito", sans-serif;
 	letter-spacing:0.04em;
 	font-weight:700;
 	font-size:38px;
 	color:#2b2b2b;
+	margin-bottom:16px;
 }
 @media screen and (max-width: 480px){
 	.title{
-		font-size:36px;
+		font-size:28px;
 	}
 }
 
-.me{
-	background-image: url('../img/me.jpg');
-	width:50%;
-	height:460px;
-	background-position:center;
-	background-size:cover;
-	display:inline-block;
+.me2{
+	width: 450px;
+	height: auto;
+	margin-right:48px;
+	margin-left:8%;
 
 }
+
+.verticalCenter{
+	display:flex;
+	align-items:center;
+}
+
 .description a{
 	text-decoration:none;
 	color:#363636;
+}
+
+
+
+.subtitle{
+	font-family:"nunito";
+	font-size:24px;
+	margin-bottom:16px;
+	color:#cccccc;
+
 }
 
 .button-resume{
@@ -665,13 +694,12 @@ a.effect-underline:hover:after {
 /*button animation*/
 
 .description{
-	width:50%;
-	height:460px;
-	padding:5%;
-	background-color:#F9F8F8;
+	width:480px;
 	line-height:150%;
 	float:right;
+	text-align:left;
 }
+
 .description p{
 	font-family: "Lato", sans serif;
 	font-weight: 300;
@@ -730,6 +758,14 @@ a.effect-underline:hover:after {
 
 /*Experiences*/
 
+.experience{
+	  width: 85%;
+    margin: 5% auto;
+    margin-top: 25%;
+    position: relative;
+}
+
+/*
 .focus-area{
 	width: 90%;
 	background-color:#F9F8F8;
@@ -770,7 +806,6 @@ a.effect-underline:hover:after {
 
 .companies{
 	text-align:center;
-	margin-top:45px;
 }
 
 .companies img{
@@ -831,7 +866,84 @@ a.effect-underline:hover:after {
 	}
 }
 
+*/
 /* Remove extra left and right margins, due to padding in columns */
+
+
+/* Experiment */
+
+.experience .subtitle{
+	font-family:Open Sans;
+	font-size:24px;
+	color:#62687F;
+	margin-bottom:32px;
+	font-weight:200;
+}
+
+
+
+.background{
+	background-image:url('../img/New/Worldmap.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position:center;
+	height:480px;
+}
+
+.companies{
+	text-align:center;
+}
+
+.companies img{
+	width:55%;
+	height:auto;
+	margin-bottom:48px;
+}
+
+.known{
+	text-align:center;
+	font-family:Open Sans;
+	font-size:16px;
+	color:#62687F;
+	font-weight:600;
+}
+
+.specialties{
+	text-align: center;
+}
+.specialties img{
+	width:60%;
+}
+
+
+
+@media screen and (max-width:480px){
+	.me2{
+		width:100%;
+		height:auto;
+		margin-left:0;
+		margin-right:0;
+	}
+
+	.experience .subtitle{
+		font-size:18px;
+		line-height:1.4;
+	}
+
+	.companies img{
+		width: 100%;
+	}
+	.specialties img {
+    width: 100%;
+	}
+
+
+
+}
+
+ /* Done */
+
+
 
 
 /*contact
@@ -955,8 +1067,6 @@ a.effect-underline:hover:after {
 	width:40px;
 	vertical-align:middle;
 }
-
-
 
 
 
