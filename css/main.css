@@ -11,9 +11,21 @@
 }
 
 
-body{
-	
+@media screen and (min-width: 1600px) {
+  
+
+  main {
+    max-width: 1440px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+ 
 }
+
+
+
+
 
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -76,7 +88,7 @@ body{
 	margin:0 auto;
 	height:55px;
 	background-color:white;
-	font-family: "lato", sans-serif;
+	font-family: "Open", sans-serif;
 	font-weight:700;
 	letter-spacing:3px;
 	font-size:12px;
@@ -210,14 +222,14 @@ header{
 	display:block;
 	font-size: 24px;
 	text-align: right;
-	font-family: "lato", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	padding-bottom: 0.5em;
 	color: #3a3a3a;
 }
 
 .intro h2{
 	font-size: 72px;
-	font-family: 'lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight:400;
 	color: #484848;
 }
@@ -423,8 +435,11 @@ a.effect-underline:hover:after {
 
 
 .work{
+	
+	/*
 	width:85%;
 	margin: 0 auto;
+	*/
 }
 
 @media screen and (max-width:768px){
@@ -445,14 +460,17 @@ a.effect-underline:hover:after {
 /* Float 3 columns side by side */
 .column {
   float: left;
-  width: 33%;
+  width: 400px;
   padding: 0 10px;
+  margin-bottom:40px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {
-	margin: 0 -5px;
-	margin-bottom:60px;
+		display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .row a{
@@ -473,8 +491,10 @@ a.effect-underline:hover:after {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: #F7F7F7;
   border-radius:5px;
-  height:450px;
+  height:536px;
   transition: 0.5s;
+  position:relative;
+  border-radius: 4px;
 }
 
 .card:hover{
@@ -487,7 +507,7 @@ a.effect-underline:hover:after {
 .card img{
 	width:100%;
 	height:auto;
-	
+
 }
 
 .greyscale{
@@ -503,32 +523,53 @@ a.effect-underline:hover:after {
 
 .cardPadding{
 	width:100%;
-	padding:30px 14px;
-	position: relative;
+	padding:32px 24px;
 }
 
+/*tags*/
+.tag{
+	padding:5px 10px;
+	font-family:Nunito;
+	font-weight:600;
+	color:#7B7E7E;
+	background-color:#E8EEEF;
+	font-size:12px;
+}
+
+.tagRow{
+	margin-bottom:24px;
+}
+
+/*End tag*/
+
+
 .card h2, h3{
-	display:inline-block;
-	font-family: lato, sans serif;
+	font-family: Nunito, sans serif;
 }
 
 .card h2{
 	font-weight: bold;
 	font-size: 18px;
-	margin-right:15px;
+	margin-bottom:8px;
+	line-height:1.4;
+
 }
 
 .card h3{
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 12px;
+	font-family:Nunito;
+	color:#C7C7C7;
+	font-weight:600;
+	margin-bottom:4px;
 }
 
 .card p{
-	margin:18px 0px;
-	font-family: lato, sans serif;
+	font-family: Open Sans, sans serif;
 	font-size:14px;
 	font-weight: 300;
-	line-height: 18px
+	line-height: 21px;
+	color: #62687F;
 }
 
 
@@ -538,8 +579,8 @@ a.effect-underline:hover:after {
 	font-family: "roboto mono", monospace;
 	font-size:14px;
 	position:absolute;
-	bottom:0px;
-	right:14px;
+	bottom:40px;
+	right:32px;
 	
 }
 
@@ -568,7 +609,7 @@ a.effect-underline:hover:after {
   }
 
   .card{
-  	  height:450px;
+  	  height:525px;
   	  margin-bottom:40px;
   }
 
@@ -664,6 +705,14 @@ a.effect-underline:hover:after {
 
 
 
+@media screen and (max-width: 768px){
+	.description a{
+		width: 100%;
+    text-align: center;
+	}
+	}		
+
+
 .subtitle{
 	font-family:"nunito";
 	font-size:24px;
@@ -674,8 +723,10 @@ a.effect-underline:hover:after {
 
 .button-resume{
 	margin-top:2em;
-	font-family:"roboto mono", monospace;
+	font-family:"Open Sans", monospace;
 	font-size:12px;
+	letter-spacing:1px;
+	font-weight:600;
 	display:inline-block;
 	position:relative;
 	padding:5px 30px 5px 30px;
@@ -701,7 +752,7 @@ a.effect-underline:hover:after {
 }
 
 .description p{
-	font-family: "Lato", sans serif;
+	font-family: "Open Sans", sans serif;
 	font-weight: 300;
 }
 
@@ -764,6 +815,7 @@ a.effect-underline:hover:after {
     margin-top: 25%;
     position: relative;
 }
+
 
 /*
 .focus-area{
@@ -874,7 +926,7 @@ a.effect-underline:hover:after {
 
 .experience .subtitle{
 	font-family:Open Sans;
-	font-size:24px;
+	font-size:18px;
 	color:#62687F;
 	margin-bottom:32px;
 	font-weight:200;
