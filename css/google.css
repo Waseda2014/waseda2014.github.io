@@ -51,6 +51,7 @@
 	font-size:12px;
 	text-transform:uppercase;
 }
+
 @media screen and (max-width: 768px){
 	.navigation a{
 		letter-spacing:3px;
@@ -64,8 +65,6 @@
 		font-size:11px;
 	}
 }
-
-
 
 .navigation li{
 	display:inline-block;
@@ -81,10 +80,26 @@
 	border-bottom: 3px solid #141414;
 }
 
+@media screen and (min-width: 1600px) {
+  main {
+    max-width: 1440px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+
 /*header
 -------------------------------------------------------------------*/
 header{
 	height:100vh;
+	background-image: url("../img/google/hero_image.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	}
+
+
 	/*
 	background: url(../img/fintech/hero_image.jpg) center center no-repeat;
 	background-size:cover;
@@ -98,7 +113,7 @@ header{
       #0074B4);
 	position: relative;
 	*/
-}
+
 
 .head{
 	position:absolute;
@@ -109,19 +124,32 @@ header{
 }
 
 .intro{
-
+  margin-bottom:50px;
 }
+
+
 .intro h1{
-	font-family: Lato, sans-serif;
-	font-size:24px;
+	font-family: Nunito, sans-serif;
+	font-size:48px;
 	width:550px;
-	margin-bottom:50px;
+	font-weight:700;
+	margin-bottom:8px;
 	line-height:1.5em;
 	letter-spacing:0.02em;
 	text-align:center;
 	margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 }
+
+.intro h2{
+	font-family: Lato, sans-serif;
+	font-size:24px;
+	text-align:center;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+
 .head img{
 	width:810px;
 	display: block;
@@ -201,88 +229,98 @@ header{
 }
 
 
-/* Old portfolio image, keep if mess up
-header figure img{
-	width:68%;
-	display:block;
-	margin: 0 auto;
-	padding-top: 185px;
-}
-*/
-/*
-header figure img{
-	width:25%;
-	display:block;
-	margin: 0 auto;
-	padding-top: 90px;
-}
-*/
-
-/*main
------------------------------------*/
-/*
-main section{
-	width:85%;
-	margin: 0 auto;
-}
-*/
-
-
 /*overview
 ----------------------------------------------------------------*/
 main section{
-	padding: 150px 20%;
-	background-color:#0957F1;
+	padding: 48px 20%;
 }
 
 .articles{
-	margin-bottom:150px;
+	margin-bottom:48px;
 }
 .accessibility{
 	margin-bottom:0%;
 }
 
-
-
-.titles_container{
-	margin:3% 0;
+.request{
+	text-align:center;
+	background-color:#676767;
+	padding-top:16px;
+	padding-bottom:16px;
+	margin-bottom:48px;
 }
 
-.overview h1{
+.request p{
 	color:white;
-	font-family: lato; 
-	letter-spacing:0.1em;
-	font-weight: medium;
+	font-family: Open Sans;
+	font-size:14px;
+	font-weight:400;
+}
+
+main h1{
+	color:#343B4C;
+	font-family: Nunito; 
+	font-weight: 700;
+	font-size:40px;
+	margin-bottom:16px;
+}
+
+main h2{
+	font-family: Nunito, sans-serif;;
+	color:#343B4C;
 	font-size:24px;
-}
-
-.overview h2{
-	font-family: Lato, sans-serif;;
-	color:white;
-	font-size:48px;
-	display:block;
-	padding:30px 0px;
-	border: solid white;
-	border-width:1px 0px;
-	margin:5% 0px;
+	font-weight:700;
+	margin-bottom:8px;
 	}
 
+.segments{
+	margin-bottom:48px;
+}
 
-.overview p{
-	font-family: 'lato', sans-serif;
+main p{
+	font-family: 'Open Sans', sans-serif;
 	font-size:16px;
 	font-weight:300;
-	color: white;
-	padding-top:18px;
+	color:#62687F ;
 	line-height:1.5em;
-	margin-bottom:5%;
-
 }
 
 .focus_area p{
 	font-family:roboto mono;
 	font-size:16px;
 }
+
+.processImg{
+	width:100%;
+}
+
+.processImg img{
+	width:100%;
+	height:auto;
+}
+
+.note{
+	padding:32px 24px;
+	background-color:#EDF4FF;
+}
+
+.note h4{
+	font-family:nunito;
+	font-size:16px;
+	margin-bottom:8px;
+	font-weight:700;
+}
+
+
+.designSprints{
+	width:100%;
+}
+
+.designSprints img{
+	width:100%;
+	height:auto;
+}
+
 
 
 .images img{
@@ -305,11 +343,11 @@ main section{
 }
 
 .other_projects .titles{
-	font-family:"lato", sans-serif;
+	font-family:"Nunito", sans-serif;
 	font-size:36px;
 	font-weight:600;
 	color:#2D2C2C;
-	margin-bottom:1em;
+	margin-bottom:64px;
 }
 
 .other_projects .titles_container{
@@ -323,18 +361,20 @@ main section{
 
 /* New Case Study Area---------------------*/
 
-
 /* Float 3 columns side by side */
 .column {
   float: left;
-  width: 33%;
+  width: 400px;
   padding: 0 10px;
+  margin-bottom:40px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {
-	margin: 0 -5px;
-	margin-bottom:60px;
+		display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .row a{
@@ -355,50 +395,87 @@ main section{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: #F7F7F7;
   border-radius:5px;
-  height:400px;
+  height:536px;
+  transition: 0.5s;
+  position:relative;
+  border-radius: 4px;
   text-align:left;
 }
 
 .card:hover{
 	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	transition: 0.5s;
 }
+
 
 
 .card img{
 	width:100%;
 	height:auto;
+
+}
+
+.greyscale{
+	transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+
+.greyscale:hover{
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
 }
 
 .cardPadding{
 	width:100%;
-	padding:30px 14px;
-	position: relative;
+	padding:32px 24px;
 }
 
+/*tags*/
+.tag{
+	padding:5px 10px;
+	font-family:Nunito;
+	font-weight:600;
+	color:#7B7E7E;
+	background-color:#E8EEEF;
+	font-size:12px;
+}
+
+.tagRow{
+	margin-bottom:24px;
+}
+
+/*End tag*/
+
+
 .card h2, h3{
-	display:inline-block;
-	font-family: lato, sans serif;
+	font-family: Nunito, sans serif;
 }
 
 .card h2{
 	font-weight: bold;
 	font-size: 18px;
-	margin-right:15px;
+	margin-bottom:8px;
+	line-height:1.4;
+
 }
 
 .card h3{
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 12px;
+	font-family:Nunito;
+	color:#C7C7C7;
+	font-weight:600;
+	margin-bottom:4px;
 }
 
 .card p{
-	margin:18px 0px;
-	font-family: lato, sans serif;
+	font-family: Open Sans, sans serif;
 	font-size:14px;
 	font-weight: 300;
-	line-height: 18px
+	line-height: 21px;
+	color: #62687F;
 }
-
 
 
 .arrow{
@@ -406,9 +483,8 @@ main section{
 	font-family: "roboto mono", monospace;
 	font-size:14px;
 	position:absolute;
-	bottom:0px;
-	right:14px;
-	
+	bottom:24px;
+	right:32px;
 }
 
 .card-text{
@@ -423,10 +499,6 @@ main section{
 }
 
 
-
-
-
-
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
   .column {
@@ -436,7 +508,7 @@ main section{
   }
 
   .card{
-  	  height:450px;
+  	  height:480px;
   	  margin-bottom:40px;
   }
 
