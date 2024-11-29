@@ -234,6 +234,12 @@ header{
 
 /*overview
 ----------------------------------------------------------------*/
+.soft{
+	font-weight:300;
+	color:grey;
+}
+
+
 main section{
 	padding: 48px 25%;
 }
@@ -288,6 +294,56 @@ main p{
 	line-height:1.5em;
 }
 
+.info{
+	width:100%;
+}
+
+.info h3{
+	font-weight:700;
+	color:#BDBDBD;
+	letter-spacing:1px;
+	font-family:Nunito;
+	font-size:14px;
+}
+
+.info p{
+	font-weight:500;
+}
+
+.role{
+	display:flex;
+	justify-content:space-between;
+	margin-bottom:24px;
+}
+
+.team div{
+	display:flex;
+	justify-content:space-between;
+}
+
+@media screen and (max-width: 768px){
+.team div{
+	  align-content: flex-start;
+    flex-direction: column;
+	}
+}
+
+.team h3{
+	margin-bottom:8px;
+}
+.team p{
+	background-color:#F7F9FF;
+	padding: 8px 16px;
+	border-radius: 100px;
+	box-shadow: rgba(5, 38, 139, 0.07) 0px 8px 24px;
+	font-size:14px;
+}
+
+
+.solution{
+	margin-bottom:48px;
+}
+
 .focus_area p{
 	font-family:roboto mono;
 	font-size:16px;
@@ -307,10 +363,21 @@ main p{
 	background-color:#EDF4FF;
 }
 
+.lightbulb{
+	height:24px;
+	width:auto;
+	margin-right:4px;
+}
+
+.notetitle{
+	display:flex;
+	align-items:center;
+	margin-bottom:8px;
+}
+
 .note h4{
 	font-family:nunito;
 	font-size:18px;
-	margin-bottom:8px;
 	font-weight:700;
 }
 
@@ -365,7 +432,6 @@ main p{
 	background-color:#363636;
 	color:white;
 }
-
 
 
 .other_projects .titles_container div{

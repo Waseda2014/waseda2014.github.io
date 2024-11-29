@@ -100,7 +100,7 @@ header{
 
 .head{
 	position:absolute;
-	top:20%;
+	top:30%;
 	left:55%;
 	transform:translateX(-50%);
 	width:1024px;
@@ -379,6 +379,7 @@ main section{
 .interactions figcaption{
 	text-align:left;
 	margin-top: 7%;
+	line-height:16px;
 }
 
 .mobile-view{
@@ -415,15 +416,16 @@ main section{
 -------------------------------------------------------*/
 .other_projects{
 	text-align:center;
+	background-color:#fafafa;
 	padding:10% 7%;
 }
 
 .other_projects .titles{
-	font-family:"lato", sans-serif;
+	font-family:"Nunito", sans-serif;
 	font-size:36px;
 	font-weight:600;
 	color:#2D2C2C;
-	margin-bottom:1em;
+	margin-bottom:64px;
 }
 
 .other_projects .titles_container{
@@ -433,20 +435,24 @@ main section{
 	font-family:"lato", sans-serif;
 	font-size:14px;
 }
-/* New Case Study Area---------------------*/
 
+
+/* New Case Study Area---------------------*/
 
 /* Float 3 columns side by side */
 .column {
   float: left;
-  width: 33%;
+  width: 400px;
   padding: 0 10px;
+  margin-bottom:40px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {
-	margin: 0 -5px;
-	margin-bottom:60px;
+		display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .row a{
@@ -467,50 +473,87 @@ main section{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: #F7F7F7;
   border-radius:5px;
-  height:400px;
+  height:536px;
+  transition: 0.5s;
+  position:relative;
+  border-radius: 4px;
   text-align:left;
 }
 
 .card:hover{
 	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	transition: 0.5s;
 }
+
 
 
 .card img{
 	width:100%;
 	height:auto;
+
+}
+
+.greyscale{
+	transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+
+.greyscale:hover{
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
 }
 
 .cardPadding{
 	width:100%;
-	padding:30px 14px;
-	position: relative;
+	padding:32px 24px;
 }
 
+/*tags*/
+.tag{
+	padding:5px 10px;
+	font-family:Nunito;
+	font-weight:600;
+	color:#7B7E7E;
+	background-color:#E8EEEF;
+	font-size:12px;
+}
+
+.tagRow{
+	margin-bottom:24px;
+}
+
+/*End tag*/
+
+
 .card h2, h3{
-	display:inline-block;
-	font-family: lato, sans serif;
+	font-family: Nunito, sans serif;
 }
 
 .card h2{
 	font-weight: bold;
 	font-size: 18px;
-	margin-right:15px;
+	margin-bottom:8px;
+	line-height:1.4;
+
 }
 
 .card h3{
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 12px;
+	font-family:Nunito;
+	color:#C7C7C7;
+	font-weight:600;
+	margin-bottom:4px;
 }
 
 .card p{
-	margin:18px 0px;
-	font-family: lato, sans serif;
+	font-family: Open Sans, sans serif;
 	font-size:14px;
 	font-weight: 300;
-	line-height: 18px
+	line-height: 21px;
+	color: #62687F;
 }
-
 
 
 .arrow{
@@ -518,9 +561,8 @@ main section{
 	font-family: "roboto mono", monospace;
 	font-size:14px;
 	position:absolute;
-	bottom:0px;
-	right:14px;
-	
+	bottom:24px;
+	right:32px;
 }
 
 .card-text{
@@ -535,10 +577,6 @@ main section{
 }
 
 
-
-
-
-
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
   .column {
@@ -548,7 +586,7 @@ main section{
   }
 
   .card{
-  	  height:450px;
+  	  height:480px;
   	  margin-bottom:40px;
   }
 
@@ -560,6 +598,10 @@ main section{
       margin-bottom: 0px;
   }
 }
+
+
+
+/* End of Case Study Area ---------------------*/
 
 
 

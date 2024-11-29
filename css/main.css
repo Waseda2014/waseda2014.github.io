@@ -24,7 +24,9 @@
 }
 
 
-
+.emphasis{
+	font-weight:700;
+}
 
 
 /* make keyframes that tell the start state and the end state of our object */
@@ -228,7 +230,7 @@ header{
 }
 
 .intro h2{
-	font-size: 72px;
+	font-size: 64px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:400;
 	color: #484848;
@@ -336,7 +338,7 @@ header{
 		font-size:16px;
 	}
 	.intro h2{
-		font-size:44px;
+		font-size:39px;
 	}
 	.intro p{
 		font-size:10px;
